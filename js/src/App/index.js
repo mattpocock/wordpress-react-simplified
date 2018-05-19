@@ -14,14 +14,14 @@ class App extends React.Component {
     componentDidMount() {
         fetchPage(pageId)
             .then((json) => {
-                // console.log(json);
+                console.log(json);
                 this.setState({
                     content: json.content.rendered,
                 });
                 if (json.featured_media !== 0) {
                     fetchMedia(json.featured_media)
                         .then((medInfo) => {
-                            // console.log(medInfo);
+                            console.log(medInfo);
                             this.setState({
                                 featuredImageLink: medInfo.source_url,
                             });
@@ -32,15 +32,16 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <img
-                    src={this.state.featuredImageLink}
-                    alt="The featured thing"
-                    style={{
-                        width: '320px',
-                    }}
-                />
+                {this.state.featuredImageLink !== '' &&
+                    <img
+                        src={this.state.featuredImageLink}
+                        alt="The featured thing"
+                        style={{
+                            width: '320px',
+                        }}
+                    />
+                }
                 <div
-                    className="wrap"
                     dangerouslySetInnerHTML={{ __html: this.state.content }}
                 />
             </React.Fragment>
