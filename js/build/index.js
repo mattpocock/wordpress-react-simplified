@@ -79,7 +79,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/* global fetch */\n/**\n * Fetches a piece of media\n * @param {int} mediaId\n */\nmodule.exports = function (mediaId) {\n  return fetch('/wp-json/wp/v2/media/' + mediaId, { method: 'GET' }).then(function (response) {\n    return response.json();\n  });\n};\n\n//# sourceURL=webpack:///./js/src/App/functions/fetchMedia.js?");
+eval("\n\n/* global fetch */\n/**\n * Fetches a page\n * @param {int} mediaId\n */\nmodule.exports = function (mediaId) {\n    return fetch('/wp-json/wp/v2/media/' + mediaId, { method: 'GET' }).then(function (response) {\n        return response.json();\n    });\n};\n\n//# sourceURL=webpack:///./js/src/App/functions/fetchMedia.js?");
 
 /***/ }),
 
@@ -91,7 +91,7 @@ eval("\n\n/* global fetch */\n/**\n * Fetches a piece of media\n * @param {int} 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n/* global fetch */\n/**\n * Fetches a page\n * @param {int} pageId\n */\nmodule.exports = function (pageId) {\n  return fetch('/wp-json/wp/v2/page/' + pageId, { method: 'GET' }).then(function (response) {\n    return response.json();\n  });\n};\n\n//# sourceURL=webpack:///./js/src/App/functions/fetchPage.js?");
+eval("\n\n/* global fetch */\n/**\n * Fetches a page\n * @param {int} pageId\n */\nmodule.exports = function (pageId) {\n    return fetch('/wp-json/wp/v2/pages/' + pageId, { method: 'GET' }).then(function (response) {\n        return response.json();\n    });\n};\n\n//# sourceURL=webpack:///./js/src/App/functions/fetchPage.js?");
 
 /***/ }),
 
